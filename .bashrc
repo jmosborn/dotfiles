@@ -97,9 +97,11 @@ alias cp='cp -i'
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+# OS X: port install bash-completion
+if [ -f /opt/local/etc/bash_completion ]; then
+	. /opt/local/etc/bash_completion
 fi
+
 
 alias screen='export TERM=screen; screen'
 
