@@ -1,4 +1,8 @@
 #!/bin/bash
+# Prereqs:
+# Install locales
+# add en_US.UTF-8 to /etc/locale.gen
+# run locale.gen
 export LANG=en_US.UTF-8
 export LC_LTYPE=en_US.UTF-8
 export PERL_UTF8_LOCALE=1 PERL_UNICODE=AS
