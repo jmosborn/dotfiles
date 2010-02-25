@@ -9,25 +9,8 @@
 export HISTCONTROL=ignoredups
 # ... and ignore same sucessive entries.
 export HISTCONTROL=ignoreboth
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LC_CTYPE="en_US.UTF-8"
-export LC_NUMERIC="en_US.UTF-8"
-export LC_TIME="en_US.UTF-8"
-export LC_COLLATE="en_US.UTF-8"
-export LC_MONETARY="en_US.UTF-8"
-export LC_MESSAGES="en_US.UTF-8"
-export LC_PAPER="en_US.UTF-8"
-export LC_NAME="en_US.UTF-8"
-export LC_ADDRESS="en_US.UTF-8"
-export LC_TELEPHONE="en_US.UTF-8"
-export LC_MEASUREMENT="en_US.UTF-8"
-export LC_IDENTIFICATION="en_US.UTF-8"
-set meta-flag on
-set input-meta on
-set output-meta on
-set convert-meta off
 
+export EDITOR=/usr/bin/vim
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -42,7 +25,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-xterm-color|rxvt|linux|xterm)
+xterm-color|rxvt)
     PS1='${debian_chroot:+($debian_chroot)}\[\033[00m\]\u@\[\033[01;37m\]\h\[\033[37m\](\[\033[01;34m\]\w\[\033[37m\])\[\033[00m\]\$ '
     ;;
 *)
@@ -52,8 +35,8 @@ esac
 
 if [ "$TERM" = "screen" ]; then
     PS1='\[\033k\033\\\]${debian_chroot:+($debian_chroot)}\[\033[00m\]\u@\[\033[01;37m\]\h\[\033[37m\](\[\033[01;34m\]\w\[\033[37m\])\[\033[00m\]\$ '
-	/usr/bin/fortune -ae
-	/usr/bin/fortune philosophy heidegger
+	/usr/games/fortune -ae
+	/usr/games/fortune philosophy heidegger
 fi
 
 # Comment in the above and uncomment this below for a color prompt
@@ -78,12 +61,12 @@ esac
 #fi
 
 # enable color support of ls and also add handy aliases
-#if [ "$TERM" != "dumb" ]; then
-    #eval "`dircolors -b`"
-    #alias ls='ls --color=auto'
+if [ "$TERM" != "dumb" ]; then
+    eval "`dircolors -b`"
+    alias ls='ls --color=auto'
     #alias dir='ls --color=auto --format=vertical'
     #alias vdir='ls --color=auto --format=long'
-#fi
+fi
 
 # some more ls aliases
 #alias ll='ls -l'

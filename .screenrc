@@ -1,4 +1,6 @@
 startup_message off
+defc1 off
+defutf8 on
 bindkey -k F2 command
 autodetach on
 vbell off
