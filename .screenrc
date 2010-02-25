@@ -1,0 +1,10 @@
+startup_message off
+bindkey -k F2 command
+autodetach on
+vbell off
+shelltitle "$ |bash"
+defscrollback 10000
+activity "Activity in %t(%n)"
+caption always "%{b k}[%{b w}${USER}@%{m}%H%{b k}] [%{= w}Win: %{b k}%-Lw%{b w}%50>%n %t%{b k}%+Lw%<%{b k}] %=[%{= w}Load: %{w}%l%{b k}] [%{= w}%D %M %d, %Y /%c:%s%{b k}]"
+#hardstatus alwayslastline "%-Lw%{= R}%50>%n %t%{-}%+Lw%<"
+#hardstatus alwayslastline "%{= KK}%{b k}[%{b w}${USER}@%H %{b k}] [%{b}Win %n: %t%{k}] %=[%{ w}Load: %{w}%l%{b k}] [%{= w}%D %M %d, %Y/%c:%s%{b k}]"
